@@ -15,7 +15,9 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        getSupportActionBar().setTitle("SIGNUP");
+        getSupportActionBar().setTitle("Reaching Hands");
+        getSupportActionBar().setSubtitle("SignUp");
+
         Intent intent1=getIntent();
         mUserName =(EditText)findViewById(R.id.p1);
         mUserEmail=(EditText)findViewById(R.id.p2);
@@ -37,8 +39,8 @@ public class SignUpActivity extends AppCompatActivity {
         else{
             //Toast.makeText(Main3Activity.this,"added",Toast.LENGTH_SHORT).show();
 
-
-            Toast.makeText(SignUpActivity.this,"added to DB",Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(SignUpActivity.this, MainActivity.class));
+            Toast.makeText(SignUpActivity.this,"Logged In!",Toast.LENGTH_SHORT).show();
 
         }
 
