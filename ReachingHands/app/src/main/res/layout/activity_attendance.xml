@@ -37,14 +37,14 @@
                 android:layout_marginLeft="40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/in_time"
+                android:id="@+id/in_time_text"
                 android:text="In Time"
                 />
             <TextView
                 android:layout_marginLeft="40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/out_time"
+                android:id="@+id/out_time_text"
                 android:text="Out Time"
                 />
             <TextView
@@ -55,12 +55,17 @@
                 android:text="Date of Joining"
                 />
         </LinearLayout>
-        <android.support.v7.widget.RecyclerView
-            android:layout_margin="10dp"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/attendance"
-            >
-        </android.support.v7.widget.RecyclerView>
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/attendance"
+                >
+            </android.support.v7.widget.RecyclerView>
+        </ScrollView>
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
