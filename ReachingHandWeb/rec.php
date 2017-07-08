@@ -71,18 +71,18 @@ hr { border-width:3px;
 <br>
 </div><center>
     <hr>
-<h3>Search by Name </h3>
-<form action="">
-  <input type="text" class="input-sm" id="name" placeholder="Enter Name">
-  <br><br>
-  <button type="submit" value="submit" class="inv">Get Record</button>
+
+<form action="***" class="form-inline">
+<label><h3>Search by Name </h3></label>
+<input type="text" class="input-sm" id="name" placeholder="Enter Name">
+<button type="submit" value="submit" class="inv">Get Record</button>
 
 </form>
 <br>
-<h3> Search by Grade </h3>
-<form action="">
-  <input type="text" class="input-sm" id="grade" placeholder="Enter Grade";>
-  <br><br>
+
+<form action="***">
+<label><h3> Search by Grade </h3></label>
+ <input type="text" class="input-sm" id="grade" placeholder="Enter Grade";>
   <button type="submit" value="submit" class="inv">Get Record</button>
 
 </form>

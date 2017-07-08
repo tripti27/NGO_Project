@@ -72,7 +72,9 @@ hr{
 <br>
 <br>
 </div><center>
-<h2>Enter item to purchase</h2>
+<form action="***" class="form-inline">
+
+<label><h3>Enter item to purchase </h3></label>
 <select>
 
   <option value="Select">Select</option>
@@ -100,11 +102,18 @@ hr{
   <option value="mug">Mug</option>
 
 </select>
-<h3>Enter quantity required </h3>
-<form action="">
-<input type="text" class="input-sm" id="uname" placeholder="Enter Quantity">
-<br><br>
+<br>
+<label><h3>Enter Your Name </h3></label>
+<input type="text" class="input-sm" id="uname" placeholder="Enter Name">
+<br>
+<label><h3>Enter quantity required </h3></label>
+<input type="text" class="input-sm" id="quant" placeholder="Enter Quantity">
+<br>
+<label><h3>Enter price</h3></label>
 <input type="text" class="input-sm" id="price" placeholder="Enter Price">
+<br>
+<label><h3>Comments</h3></label>
+<input type="text" class="input-md" id="comment" placeholder="Click here to write comment">
 <br><br>
 <button type="submit" value="submit" class="inv">Make Request</button>
 

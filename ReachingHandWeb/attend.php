@@ -72,7 +72,8 @@ hr{
 <br>
 <br>
 </div><center>
-<h2>Staff Attendence</h2>
+<form action="***">
+<label><h2>Staff Attendence</h2></label>
 <select>
 
   <option value="Select">Select Name</option>
@@ -90,15 +91,15 @@ hr{
   <option value="Simran">Simran</option>
 
 </select>
+<br>
 
 
-<form action="***">
-  <h3>Date and In-Time </h3>
-  <input type="datetime-local" name="datetime1">
-  <h3>Date and Out-Time </h3>
+  <label><h3>Date and In-Time </h3></label>
+  <input type="datetime-local" name="datetime1"><br>
+  <label><h3>Date and Out-Time </h3></label>
   <input type="datetime-local" name="datetime2">
 <br><br>
-  <input type="submit" class="inv" value="Submit">
+  <input type="submit" class="inv" value="Click to Submit">
 </form>
 </center>
 </body>
