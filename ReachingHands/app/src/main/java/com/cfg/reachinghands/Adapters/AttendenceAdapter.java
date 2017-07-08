@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cfg.reachinghands.Beans.Staff;
+import com.cfg.reachinghands.Beans.StaffList;
 import com.cfg.reachinghands.R;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class AttendenceAdapter extends RecyclerView.Adapter<AttendenceAdapter.Vi
 
     public AttendenceAdapter(ArrayList<Staff> mStaffList) {
 
-        this.mStaffList = mStaffList;
+        this.mStaffList = StaffList.getInstance().mStaffList;
     }
 
     @Override
@@ -43,7 +44,7 @@ public class AttendenceAdapter extends RecyclerView.Adapter<AttendenceAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return mStaffList.size();
+        return StaffList.getInstance().mStaffList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -59,7 +60,6 @@ public class AttendenceAdapter extends RecyclerView.Adapter<AttendenceAdapter.Vi
             date = (TextView)itemView.findViewById(R.id.staff_date);
             in = (TextView)itemView.findViewById(R.id.in_time);
             out = (TextView)itemView.findViewById(R.id.out_time);
-
 
         }
     }
