@@ -1,14 +1,16 @@
 package com.cfg.reachinghands.Beans;
 
+import java.io.Serializable;
+
 /**
  * Created by Varsha on 08-07-2017.
  */
 
-public class Staff {
-    private String name;
-    private String date;
-    private String in_time;
-    private String out_time;
+public class Staff implements Serializable{
+    String name;
+    String date;
+    String in_time;
+    String out_time;
 
     public Staff(String name, String date, String in_time, String out_time) {
         this.name = name;

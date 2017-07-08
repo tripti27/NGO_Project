@@ -5,6 +5,6 @@ package com.cfg.reachinghands;
  */
 
 public class Config {
-    public static final String DATA_URL = "http://127.0.0.1/jpm";
+    public static final String DATA_URL = "http://192.168.43.61/cfg.php";
 
 }
