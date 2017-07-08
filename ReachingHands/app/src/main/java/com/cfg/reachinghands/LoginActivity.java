@@ -28,8 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Toast.makeText(this, "Log In successful!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.signup:
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                Toast.makeText(this, "Log In successful!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
                 break;
         }
     }
