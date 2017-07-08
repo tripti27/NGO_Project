@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2017 at 01:24 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Generation Time: Jul 08, 2017 at 11:53 PM
+-- Server version: 10.1.10-MariaDB
+-- PHP Version: 5.5.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -32,6 +32,32 @@ CREATE TABLE `bclothing` (
   `shoes` int(10) NOT NULL,
   `socks` int(10) NOT NULL,
   `jacket` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bclothing`
+--
+
+INSERT INTO `bclothing` (`pants`, `shirts`, `shoes`, `socks`, `jacket`) VALUES
+(3, 5, 15, 7, 10),
+(10, 20, 20, 30, 40);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `boys`
+--
+
+CREATE TABLE `boys` (
+  `Name` varchar(10) NOT NULL,
+  `Fathers name` varchar(10) NOT NULL,
+  `Mothers name` varchar(10) NOT NULL,
+  `DOB` varchar(10) NOT NULL,
+  `DOJ` varchar(10) NOT NULL,
+  `Blood Group` varchar(10) NOT NULL,
+  `Weight` float NOT NULL,
+  `Height` float NOT NULL,
+  `Grade` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -73,6 +99,24 @@ CREATE TABLE `gclothing` (
   `shoes` int(10) NOT NULL,
   `socks` int(10) NOT NULL,
   `jacket` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `girls`
+--
+
+CREATE TABLE `girls` (
+  `Name` varchar(10) NOT NULL,
+  `Fathers name` varchar(10) NOT NULL,
+  `Mothers name` varchar(10) NOT NULL,
+  `DOB` varchar(10) NOT NULL,
+  `DOJ` varchar(10) NOT NULL,
+  `Blood group` varchar(10) NOT NULL,
+  `Weight` float NOT NULL,
+  `Height` float NOT NULL,
+  `Grade` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -162,6 +206,18 @@ CREATE TABLE `student` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `boys`
+--
+ALTER TABLE `boys`
+  ADD PRIMARY KEY (`Name`);
+
+--
+-- Indexes for table `girls`
+--
+ALTER TABLE `girls`
+  ADD PRIMARY KEY (`Name`);
 
 --
 -- Indexes for table `login_details`
