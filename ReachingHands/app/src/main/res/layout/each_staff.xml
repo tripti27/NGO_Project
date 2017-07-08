@@ -8,32 +8,28 @@
         android:orientation="horizontal"
         android:layout_marginBottom="5dp"
         >
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/staff_name"
-            android:hint="Name"
             />
-        <EditText
+        <TextView
             android:layout_marginLeft="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/in_time"
-            android:hint="In Time"
             />
-        <EditText
+        <TextView
             android:layout_marginLeft="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/out_time"
-            android:hint="Out Time"
             />
-        <EditText
+        <TextView
             android:layout_marginLeft="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/staff_date"
-            android:hint="DOJ"
             />
     </LinearLayout>
 

@@ -41,7 +41,7 @@ public class SignUpActivity extends AppCompatActivity {
 
             startActivity(new Intent(SignUpActivity.this, MainActivity.class));
             Toast.makeText(SignUpActivity.this,"Logged In!",Toast.LENGTH_SHORT).show();
-
+            finish();
         }
 
     }
