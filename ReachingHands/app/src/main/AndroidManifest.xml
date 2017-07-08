@@ -22,7 +22,8 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AttendanceActivity"></activity>
+        <activity android:name=".AttendanceActivity" />
+        <activity android:name=".RequestActivity"></activity>
     </application>
 
 </manifest>
