@@ -28,7 +28,14 @@
       <label for="pwd">Password:</label>
       <input type="password" class="input-sm" id="pwd" placeholder="Enter Password">
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+	<br>
+	<select>
+<option value="Select">Select</option>
+<option value="Admin">Admin</option>
+<option value="Staff">Staff</option>
+</select>
+<br><br>
+    <button type="submit" value="submit" class="btn btn-default">Submit</button>
   </form>
 </center>
 
