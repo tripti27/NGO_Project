@@ -26,15 +26,6 @@ public class MainActivity extends AppCompatActivity
 
         getSupportActionBar().setTitle("Admin");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -106,7 +97,7 @@ public class MainActivity extends AppCompatActivity
     public void onClick(View view) {
         switch(view.getId()) {
             case R.id.attendance:
-                startActivity(new Intent());
+                startActivity(new Intent(MainActivity.this, AttendanceActivity.class));
             case R.id.req:
         }
     }
