@@ -37,8 +37,6 @@ public class AttendanceActivity extends AppCompatActivity {
 
         Staff staff = new Staff("-", "-", "-", "-");
         StaffList.getInstance().mStaffList = new ArrayList<>();
-        StaffList.getInstance().mStaffList.add(staff);
-        StaffList.getInstance().mStaffList.add(new Staff("2", "3", "4", "5"));
 
         Log.e("TAG", StaffList.getInstance().mStaffList.toString() + " at attendence");
 

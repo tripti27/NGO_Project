@@ -39,6 +39,9 @@ public class AttendenceAdapter extends RecyclerView.Adapter<AttendenceAdapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.name.setText(mStaffList.get(position).getName());
+        holder.date.setText(mStaffList.get(position).getDate());
+        holder.in.setText(mStaffList.get(position).getIn_time());
+        holder.out.setText(mStaffList.get(position).getOut_time());
         //holder.name.setText("hello");
     }
 
