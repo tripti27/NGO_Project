@@ -78,7 +78,7 @@ hr{
 <button type="submit" value="submit" class="inv">Enter Student Record</button>
 </form></td><br><br><td>
 <form action="attend.php">
-  <button type="submit" value="submit" class="inv">Take Attendence</button>
+  <button type="submit" value="submit" class="inv">Take Attendance</button>
 </form></td><br><br><td>
 <form action="receipt.php">
   <button type="submit" value="submit" class="inv">Upload Purchase Receipt</button>

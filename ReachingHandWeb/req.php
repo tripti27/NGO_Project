@@ -96,6 +96,8 @@ hr{
 <form action="">
 <input type="text" class="input-sm" id="uname" placeholder="Enter Quantity">
 <br><br>
+<input type="text" class="input-sm" id="price" placeholder="Enter Price">
+<br><br>
 <button type="submit" value="submit" class="inv">Make Request</button>
 
 </form>
