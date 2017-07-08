@@ -2,6 +2,7 @@ package com.cfg.reachinghands;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -27,7 +28,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         if( !ll.equals(l2))
         {
-            Toast.makeText(Main3Activity.this,"passwords do not match",Toast.LENGTH_LONG).show();
+            Toast.makeText(SignUpActivity.this,"passwords do not match", Toast.LENGTH_LONG).show();
         }
         else{
             //Toast.makeText(Main3Activity.this,"added",Toast.LENGTH_SHORT).show();
