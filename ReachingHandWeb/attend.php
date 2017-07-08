@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style type="text/css">
+  <style type="text/css">
 .inv {
 	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
@@ -50,52 +50,56 @@
 	top:1px;
 }
 hr{
-  border-width:4px;
+  border-width:3px;
   }
-h2{
-font-family: "Times New Roman", Times, serif;
-font-weight: bold;
-}
+
+.bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
 </style>
 </head>
 <body>
-  <center>
-
+  
+<div class="container-fluid bg-1 text-center">
+<center>
 <tr>
   <td>
     <br><br>
   <img src="reachinghand.jpg" class="img-responsive">
 </td>
-</tr>
+</tr><hr>
 <br>
-<hr>
 <br>
-  <h2>LOGIN PAGE</h2>
+</div><center>
+<h2>Staff Attendence</h2>
+<select>
 
-  <form action="staff.php">
-    <h3>For Staff: </h3><br>
-    <label>
-      <label for="username">User Name:</label>
-      <input type="text" class="input-sm" id="uname" placeholder="Enter User Name">
-&nbsp;
-    
-    <button type="submit" value="submit" class="inv">Submit</button>
-</label>
-  </form>
+  <option value="Select">Select Name</option>
+  <option value="Radha">Radha</option>
+  <option value="Seema">Seema</option>
+  <option value="Sana">Sana</option>
+  <option value="Dev">Dev</option>
+  <option value="Santosh">Santosh</option>
+  <option value="Diya">Diya</option>
+  <option value="Vaibhav">Vaibhav</option>
+  <option value="John">John</option>
+  <option value="Shreya">Shreya</option>
+  <option value="David">David</option>
+  <option value="Haley">Haley</option>
+  <option value="Simran">Simran</option>
 
-<form action="admin.php">
-    <h3>For Admin: </h3><br>
-<label>
-    
-      <label for="username">User Name:</label>
-      <input type="text" class="input-sm" id="uname" placeholder="Enter User Name">
-    </div>
-&nbsp;
-    <button type="submit" value="submit" class="inv">Submit</button>
-</label>
-  </form>
+</select>
 
+
+<form action="***">
+  <h3>Date and In-Time </h3>
+  <input type="datetime-local" name="datetime1">
+  <h3>Date and Out-Time </h3>
+  <input type="datetime-local" name="datetime2">
+<br><br>
+  <input type="submit" class="inv" value="Submit">
+</form>
 </center>
-
 </body>
 </html>

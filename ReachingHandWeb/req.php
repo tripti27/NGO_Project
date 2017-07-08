@@ -51,11 +51,18 @@
 }
 hr{
   border-width:3px;
-  }</style>
+  }
+
+.bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+</style>
 </head>
 <body>
-  <center>
-
+  
+<div class="container-fluid bg-1 text-center">
+<center>
 <tr>
   <td>
     <br><br>
@@ -64,6 +71,7 @@ hr{
 </tr><hr>
 <br>
 <br>
+</div><center>
 <h2>Enter item to purchase</h2>
 <select>
 

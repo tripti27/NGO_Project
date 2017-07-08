@@ -73,13 +73,26 @@
 .form-style-4 input[type=button]:hover{
 background: #394D61;
 }
-
+.bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
 </style>
 </head>
 <center>
 <body>
-<h1> Upload receipt </h1>
-<br><br><br><br><br><br><br><br><br><br><br>
+<div class="container-fluid bg-1 text-center">
+<center>
+<tr>
+  <td>
+    <br><br>
+  <img src="reachinghand.jpg" class="img-responsive">
+</td>
+</tr><hr>
+
+</div><center>
+
+<h1> Upload receipt </h1><br><br><br><br>
 <form class="form-style-4" action="***" method="post">
 <label for="field1">
 <span>Enter Your Name</span><input type="text" name="field1" required="true" />

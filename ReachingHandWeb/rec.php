@@ -51,16 +51,25 @@
   }
 hr { border-width:3px;
 }
+
+.bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
   </style>
 </head>
 <body>
-  <center>
-    <tr>
-      <td>
-        <br><br>
-      <img src="reachinghand.jpg" class="img-responsive">
-    </td>
-    </tr>
+  <div class="container-fluid bg-1 text-center">
+<center>
+<tr>
+  <td>
+    <br><br>
+  <img src="reachinghand.jpg" class="img-responsive">
+</td>
+</tr><hr>
+<br>
+<br>
+</div><center>
     <hr>
 <h3>Search by Name </h3>
 <form action="">
