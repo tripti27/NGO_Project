@@ -62,26 +62,23 @@ hr{
     </td>
     </tr>
     <hr>
-  <h2>Welcome to staff profile</h2><br>
+  <h2>Welcome to Admin profile</h2><br>
   <tr><td>
   <form action="inv.php">
 
   <button type="submit" value="submit" class="inv">Check Inventory</button>
 </form></td><br><br><td>
-<form action="req.php">
-  <button type="submit" value="submit" class="inv">Make Request</button>
+<form action="***">
+  <button type="submit" value="submit" class="inv">Check Request</button>
 </form></td><br><br><td>
 <form action="rec.php">
   <button type="submit" value="submit" class="inv">Check Student Record</button>
 </form></td><br><br><td>
-<form action="student.php">
-<button type="submit" value="submit" class="inv">Enter Student Record</button>
-</form></td><br><br><td>
-<form action="attend.php">
+<form action="attend2.php">
   <button type="submit" value="submit" class="inv">Take Attendence</button>
 </form></td><br><br><td>
-<form action="receipt.php">
-  <button type="submit" value="submit" class="inv">Upload Purchase Receipt</button>
+<form action="receipt2.php">
+  <button type="submit" value="submit" class="inv">View Purchase Receipt</button>
 </form></td>
 </center>
 </body>
