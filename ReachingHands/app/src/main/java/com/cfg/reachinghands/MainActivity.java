@@ -98,8 +98,10 @@ public class MainActivity extends AppCompatActivity
         switch(view.getId()) {
             case R.id.attendance:
                 startActivity(new Intent(MainActivity.this, AttendanceActivity.class));
+                break;
             case R.id.req:
                 startActivity(new Intent(MainActivity.this, RequestActivity.class));
+                break;
         }
     }
 }
