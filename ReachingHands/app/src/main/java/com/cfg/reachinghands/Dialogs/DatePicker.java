@@ -1,4 +1,4 @@
-package com.appcraftz.medicallpharma.Dialogs;
+package com.cfg.reachinghands.Dialogs;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -10,10 +10,10 @@ import android.widget.EditText;
 import java.util.Calendar;
 
 /**
- * Created by appcraftz on 03/05/17.
+ * Created by Varsha on 09-07-2017.
  */
 
-public class DatePicker extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+public class DatePicker extends DialogFragment implements DatePickerDialog.OnDateSetListener  {
 
     EditText view;
 
@@ -34,11 +34,11 @@ public class DatePicker extends DialogFragment implements DatePickerDialog.OnDat
 
 
         return new DatePickerDialog(getActivity(),this,year,month,day);
+
     }
 
     @Override
     public void onDateSet(android.widget.DatePicker view, int year, int month, int dayOfMonth) {
-
         String date = String.valueOf(dayOfMonth)+"-"+String.valueOf(month+1)+"-"+String.valueOf(year);
         this.view.setText(date);
     }
