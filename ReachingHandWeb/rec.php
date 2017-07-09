@@ -72,7 +72,7 @@ hr { border-width:3px;
 </div><center>
     <hr>
 
-<form action="***" class="form-inline">
+<form action="search.php" class="form-inline">
 <label><h3>Search by Name </h3></label>
 <input type="text" class="input-sm" id="name" placeholder="Enter Name">
 <button type="submit" value="submit" class="inv">Get Record</button>
@@ -80,7 +80,7 @@ hr { border-width:3px;
 </form>
 <br>
 
-<form action="***">
+<form action="searchg.php">
 <label><h3> Search by Grade </h3></label>
  <input type="text" class="input-sm" id="grade" placeholder="Enter Grade";>
   <button type="submit" value="submit" class="inv">Get Record</button>

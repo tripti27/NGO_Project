@@ -108,11 +108,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="inv.php">Check Inventory</a>
+      <a class="navbar-brand" href="groceriesPrint.php">Check Inventory</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="***">Check Request</a></li>
+        <li><a href="checkreq.php">Check Request</a></li>
         <li><a href="rec.php">Check Student Record</a></li>
         <li><a href="***">View Receipt</a></li>
       </ul>

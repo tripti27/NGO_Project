@@ -108,7 +108,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="inv.php">Check Inventory</a>
+      <a class="navbar-brand" href="groceriesPrint.php">Check Inventory</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
