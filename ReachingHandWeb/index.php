@@ -51,6 +51,7 @@
 }
 hr{
   border-width:4px;
+	
   }
 h2{
 font-family: "Times New Roman", Times, serif;
@@ -70,32 +71,42 @@ font-weight: bold;
 <br>
 <hr>
 <br>
-  <h2>LOGIN PAGE</h2>
 
-  <form action="staff.php">
-    <h3>For Staff: </h3><br>
-    <label>
-      <label for="username">User Name:</label>
-      <input type="text" class="input-sm" id="uname" placeholder="Enter User Name">
-&nbsp;
-    
-    <button type="submit" value="submit" class="inv">Submit</button>
-</label>
-  </form>
+  <div class="row" style="margin: 0px 250px 0px 250px">
+<div class="span6">
+ <span style="float:left" > 
+<form class="form-horizontal">
 
-<form action="admin.php">
-    <h3>For Admin: </h3><br>
-<label>
-    
-      <label for="username">User Name:</label>
-      <input type="text" class="input-sm" id="uname" placeholder="Enter User Name">
-    </div>
-&nbsp;
-    <button type="submit" value="submit" class="inv">Submit</button>
-</label>
-  </form>
+ <h2 class="form-signin-heading">Staff Login</h2>
+ <input type="text" class="input-block-level" placeholder="Username">
+ <input type="password" class="input-block-level" placeholder="Password">
+ <label class="checkbox">
+ <input type="checkbox" value="remember-me"> Remember me
+ </label>
+ <button class="inv" type="submit">Click to Sign in</button>
+</span>
+ </form>
+ 
+</div>
+ 
+ <div class="span6">
+ <span style="float:right" > 
+<form class="form-horizontal">
 
-</center>
+ 
+ <h2 class="form-signin-heading">Admin Login</h2>
+ <input type="text" class="input-block-level" placeholder="Username">
+ <input type="password" class="input-block-level" placeholder="Password">
+ <label class="checkbox">
+ <input type="checkbox" value="remember-me"> Remember me
+ </label>
+ <button class="inv" type="submit">Click to Sign in</button>
+
+ </form>
+ </span>
+</div>
+ 
+</div>
 
 </body>
 </html>
