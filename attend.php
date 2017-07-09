@@ -92,7 +92,7 @@ hr{
 </select>
 
 
-<form action="***">
+<form action="addStud.php">
   <h3>Date and In-Time </h3>
   <input type="datetime-local" name="datetime1">
   <h3>Date and Out-Time </h3>
