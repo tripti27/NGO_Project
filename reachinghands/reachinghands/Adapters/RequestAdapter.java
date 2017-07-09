@@ -42,15 +42,27 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(RequestAdapter.ViewHolder holder, int position) {
+        /*
         holder.item_name.setText(mReqList.get(position).getItem());
         holder.qty.setText(mReqList.get(position).getQty() + "");
         holder.who.setText(mReqList.get(position).getWho());
         holder.desc.setText(mReqList.get(position).getDesc());
+        */
+        if(position == 1) {
+            holder.item_name.setText("Bread");
+            holder.qty.setText("2");
+            holder.who.setText("Kamlesh");
+            holder.desc.setText("Urgent requirement");
+        }
+        holder.item_name.setText("Tomatoes");
+        holder.qty.setText("5kgs");
+        holder.who.setText("Nirmala");
+        holder.desc.setText("Whenever Possible!");
     }
 
     @Override
     public int getItemCount() {
-        return 1; /*mReqList.size();*/
+        return 2; /*mReqList.size();*/
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
