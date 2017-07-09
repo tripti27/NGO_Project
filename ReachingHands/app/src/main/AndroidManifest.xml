@@ -26,7 +26,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".AttendanceActivity" />
         <activity android:name=".RequestActivity" />
-        <activity android:name=".ReminderActivity"></activity>
+        <activity android:name=".ReminderActivity" />
+        <activity android:name=".MessageActivity"></activity>
     </application>
 
 </manifest>
