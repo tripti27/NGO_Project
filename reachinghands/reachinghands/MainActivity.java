@@ -22,6 +22,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.cfg.reachinghands.Beans.Request;
+import com.cfg.reachinghands.Beans.RequestList;
 import com.cfg.reachinghands.Beans.Staff;
 import com.cfg.reachinghands.Beans.StaffList;
 
@@ -115,7 +117,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
-
+            startActivity(new Intent(MainActivity.this, MessageActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -134,10 +136,10 @@ public class MainActivity extends AppCompatActivity
                 }
                 break;
             case R.id.req:
-                i = getData();
-                if(i==2) {
-                    startActivity(new Intent(MainActivity.this, RequestActivity.class));
-                }
+                i = getDataReq();
+                Request r = new Request("Eggs", 5, "Kamlesh", "Urgent requirement");
+                RequestList.getInstance().getmRequestList().add(r);
+                startActivity(new Intent(MainActivity.this, RequestActivity.class));
                 break;
         }
     }
@@ -179,11 +181,11 @@ public class MainActivity extends AppCompatActivity
                 JSONObject each = array.getJSONObject(i);
                 String name = each.getString("name");
                 Log.e("TAG", name);
-                String date = each.getString("address");
+                String date = each.getString("doj");
                 Log.e("TAG", date);
-                String intime = each.getString("vc");
+                String intime = each.getString("designation");
                 Log.e("TAG", intime);
-                String outtime = "123";  //each.getString("out_time");
+                String outtime = each.getString("attendance");
                 Log.e("TAG", outtime);
                 Staff staff = new Staff(name, date, intime, outtime);
                 StaffList.getInstance().mStaffList.add(staff);
@@ -198,7 +200,7 @@ public class MainActivity extends AppCompatActivity
 
     private int getDataReq() {
 
-        loading = ProgressDialog.show(this,"Please wait...","Fetching...",false,false);
+        //loading = ProgressDialog.show(this,"Please wait...","Fetching...",false,false);
 
         String url = Config.REQUEST_DATA_URL;         //editTextId.getText().toString().trim();
 
