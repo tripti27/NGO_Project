@@ -9,5 +9,9 @@ public class ReminderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminder);
+        getSupportActionBar().setTitle("Reaching Hands");
+        getSupportActionBar().setSubtitle("Appointment Reminder");
+
+
     }
 }
