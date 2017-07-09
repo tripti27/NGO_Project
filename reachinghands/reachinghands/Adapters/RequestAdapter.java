@@ -53,11 +53,12 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.ViewHold
             holder.qty.setText("2");
             holder.who.setText("Kamlesh");
             holder.desc.setText("Urgent requirement");
+        } else {
+            holder.item_name.setText("Tomatoes");
+            holder.qty.setText("5kgs");
+            holder.who.setText("Nirmala");
+            holder.desc.setText("Whenever Possible!");
         }
-        holder.item_name.setText("Tomatoes");
-        holder.qty.setText("5kgs");
-        holder.who.setText("Nirmala");
-        holder.desc.setText("Whenever Possible!");
     }
 
     @Override
