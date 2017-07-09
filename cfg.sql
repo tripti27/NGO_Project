@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2017 at 11:53 PM
--- Server version: 10.1.10-MariaDB
--- PHP Version: 5.5.33
+-- Generation Time: Jul 09, 2017 at 03:41 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -189,19 +189,81 @@ CREATE TABLE `login_details` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `receipt`
+--
+
+CREATE TABLE `receipt` (
+  `bill` mediumtext NOT NULL,
+  `Name` varchar(20) NOT NULL,
+  `Contact` int(13) NOT NULL,
+  `Comments` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request`
+--
+
+CREATE TABLE `request` (
+  `Requester Name` varchar(50) NOT NULL,
+  `Item` varchar(10) NOT NULL,
+  `Quantity` int(10) NOT NULL,
+  `Amount` float NOT NULL,
+  `Comments` varchar(100) NOT NULL,
+  `status` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `request`
+--
+
+INSERT INTO `request` (`Requester Name`, `Item`, `Quantity`, `Amount`, `Comments`, `status`) VALUES
+('Hari', 'shampoo', 50, 500, 'shampoo for boys dorm', 0),
+('Veena', 'Toothpaste', 20, 650, 'toothpaste for girls dorm', 0),
+('Raju', 'shoes', 2, 1500, 'shoes for ram and shyam', 0),
+('Girija', 'toys', 25, 5000, 'toys for girls and boys', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sattend`
+--
+
+CREATE TABLE `sattend` (
+  `name` varchar(20) NOT NULL,
+  `intime` varchar(1000) NOT NULL,
+  `outtime` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `student`
 --
 
 CREATE TABLE `student` (
   `Name` varchar(10) NOT NULL,
-  `Father Name` varchar(10) NOT NULL,
-  `Mother Name` varchar(10) NOT NULL,
-  `Date of Joining` date NOT NULL,
-  `Date of Birth` date NOT NULL,
-  `Blood Group` varchar(10) NOT NULL,
+  `Father` varchar(10) NOT NULL,
+  `Mother` varchar(10) NOT NULL,
+  `doj` date NOT NULL,
+  `dob` date NOT NULL,
+  `Blood` varchar(10) NOT NULL,
   `Height` float NOT NULL,
-  `Weight` int(11) NOT NULL
+  `Weight` int(11) NOT NULL,
+  `Grade` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`Name`, `Father`, `Mother`, `doj`, `dob`, `Blood`, `Height`, `Weight`, `Grade`) VALUES
+('Akul', '-', '-', '2016-06-09', '2010-06-10', 'O+ve', 4.2, 35, ''),
+('Manju', '-', '-', '2013-02-21', '2003-04-22', 'AB+ve', 5.5, 53, ''),
+('Rahul', 'Ramanna', 'Meera', '2015-02-01', '2008-08-20', 'B+ve', 5.1, 45, ''),
+('Rama', '-', '-', '2016-06-09', '2011-06-20', 'O-ve', 4.4, 39, ''),
+('Sanjana', '-', '-', '2017-01-24', '0000-00-00', '', 4.4, 50, '5th');
 
 --
 -- Indexes for dumped tables
