@@ -1,9 +1,23 @@
 <?php
-require_once("db.php");
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname="jpm";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
 $Name=$_POST['Name'];
 $intime=$_POST['datetime1'];
 $outtime=$_POST['datetime2'];
-$query=mysql_query("INSERT INTO sattend (Name,intime,outtime) VALUES ('$Name','$intime','$outtime')");
-echo "<p>Record inserted</p>";
+$sql="INSERT INTO sattend (name,intime,outtime) VALUES ('$Name','$intime','$outtime')";
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
 ?>
 <a href="attend2.php">GO BACK</a>

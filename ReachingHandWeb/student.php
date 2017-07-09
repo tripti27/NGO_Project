@@ -26,7 +26,7 @@
 <h2>Record Entry </h2>
 
 
-    <form class="well form-horizontal" action=" addStud.php" method="post"  id="contact_form">
+    <form class="well form-horizontal" action="addStud.php" method="post"  id="contact_form">
 <fieldset>
 
 

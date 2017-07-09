@@ -72,9 +72,9 @@ hr{
 <br>
 <br>
 </div><center>
-<form action="sattend.php">
+<form method="post" action="stattend.php" >
 <label><h2>Staff Attendence</h2></label>
-<select>
+<select name="Name">
 
   <option value="Select">Select Name</option>
   <option value="Radha">Radha</option>
@@ -95,9 +95,9 @@ hr{
 
 
   <label><h3>Date and In-Time </h3></label>
-  <input type="datetime-local" name="datetime1"><br>
+  <input type="text" name="datetime1"><br>
   <label><h3>Date and Out-Time </h3></label>
-  <input type="datetime-local" name="datetime2">
+  <input type="text" name="datetime2">
 <br><br>
   <input type="submit" class="inv" value="Click to Submit">
 </form>

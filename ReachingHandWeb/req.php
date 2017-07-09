@@ -72,10 +72,10 @@ hr{
 <br>
 <br>
 </div><center>
-<form action="***" class="form-inline">
+<form action="storereq.php" method="post" class="form-inline">
 
 <label><h3>Enter item to purchase </h3></label>
-<select>
+<select name="item">
 
   <option value="Select">Select</option>
   <option value="pants">Pants</option>
@@ -104,16 +104,16 @@ hr{
 </select>
 <br>
 <label><h3>Enter Your Name </h3></label>
-<input type="text" class="input-sm" id="uname" placeholder="Enter Name">
+<input type="text" class="input-sm" name="uname" placeholder="Enter Name">
 <br>
 <label><h3>Enter quantity required </h3></label>
-<input type="text" class="input-sm" id="quant" placeholder="Enter Quantity">
+<input type="text" class="input-sm" name="quant" placeholder="Enter Quantity">
 <br>
 <label><h3>Enter price</h3></label>
-<input type="text" class="input-sm" id="price" placeholder="Enter Price">
+<input type="text" class="input-sm" name="price" placeholder="Enter Price">
 <br>
 <label><h3>Comments</h3></label>
-<input type="text" class="input-md" id="comment" placeholder="Click here to write comment">
+<input type="text" class="input-md" name="comment" placeholder="Click here to write comment">
 <br><br>
 <button type="submit" value="submit" class="inv">Make Request</button>
 

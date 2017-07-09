@@ -72,9 +72,9 @@ hr{
 <br>
 <br>
 </div><center>
-<form action="sattend.php">
+<form action="sattend.php" method="post">
 <label><h2>Student Attendence</h2></label>
-<select>
+<select name="Name">
 
   <option value="Select">Select Name</option>
   <option value="Meera">Meera</option>
@@ -95,11 +95,11 @@ hr{
 
 <br><label>
   <h3>Date and In-Time </h3></label>
-  <input type="datetime-local" name="datetime1">
+  <input type="text" name="datetime1">
   <br><label><h3>Date and Out-Time </h3></label>
-  <input type="datetime-local" name="datetime2">
+  <input type="text" name="datetime2">
 <br><br>
-  <input type="submit" class="inv" value="Click to Submit">
+  <input type="submit" name="submit" class="inv" value="Click to Submit">
 </form>
 </center>
 </body>
