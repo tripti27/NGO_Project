@@ -1,6 +1,7 @@
 package com.cfg.reachinghands;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -28,6 +29,7 @@ public class AttendanceActivity extends AppCompatActivity {
     private static RecyclerView mAttendenceView;
     private static RecyclerView.LayoutManager mAttendenceLayoutManager;
     private static RecyclerView.Adapter mAttendenceAdapter;
+    private static Context con;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +47,12 @@ public class AttendanceActivity extends AppCompatActivity {
         mAttendenceView.setHasFixedSize(true);
         mAttendenceLayoutManager = new LinearLayoutManager(this);
         mAttendenceView.setLayoutManager(mAttendenceLayoutManager);
+        con = getApplicationContext();
         notifyAdapter();
     }
 
     public static void notifyAdapter() {
-        mAttendenceAdapter =  new AttendenceAdapter(StaffList.getInstance().mStaffList);
+        mAttendenceAdapter =  new AttendenceAdapter(con,StaffList.getInstance().mStaffList);
         mAttendenceView.setAdapter(mAttendenceAdapter);
     }
 

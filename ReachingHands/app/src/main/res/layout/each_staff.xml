@@ -16,20 +16,20 @@
             android:layout_height="wrap_content"
             android:id="@+id/staff_name"
             />
-        <TextView
+        <EditText
             android:layout_marginLeft="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/in_time"
             />
-        <TextView
-            android:layout_marginLeft="100dp"
+        <EditText
+            android:layout_marginLeft="70dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/out_time"
             />
         <TextView
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="90dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/staff_date"

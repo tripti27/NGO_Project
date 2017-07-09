@@ -1,15 +1,19 @@
 package com.cfg.reachinghands.Adapters;
 
 import android.content.Context;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import com.cfg.reachinghands.AttendanceActivity;
 import com.cfg.reachinghands.Beans.Staff;
 import com.cfg.reachinghands.Beans.StaffList;
+import com.cfg.reachinghands.Dialogs.DatePicker;
 import com.cfg.reachinghands.R;
 
 import java.util.ArrayList;
@@ -21,10 +25,12 @@ import java.util.ArrayList;
 public class AttendenceAdapter extends RecyclerView.Adapter<AttendenceAdapter.ViewHolder> {
 
     private ArrayList<Staff> mStaffList;
+    Context con;
 
-    public AttendenceAdapter(ArrayList<Staff> mStaffList) {
+    public AttendenceAdapter(Context con, ArrayList<Staff> mStaffList) {
 
         this.mStaffList = StaffList.getInstance().mStaffList;
+        this.con = con;
     }
 
     @Override
@@ -42,7 +48,6 @@ public class AttendenceAdapter extends RecyclerView.Adapter<AttendenceAdapter.Vi
         holder.date.setText(mStaffList.get(position).getDate());
         holder.in.setText(mStaffList.get(position).getIn_time());
         holder.out.setText(mStaffList.get(position).getOut_time());
-        //holder.name.setText("hello");
     }
 
     @Override
@@ -52,18 +57,35 @@ public class AttendenceAdapter extends RecyclerView.Adapter<AttendenceAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView name, date, in, out;
+        public TextView name, date;
+        public EditText in, out;
         Button setAttendance;
         View mView;
+
         public ViewHolder(View itemView) {
             super(itemView);
             mView = itemView;
 
-            name = (TextView)itemView.findViewById(R.id.staff_name);
-            date = (TextView)itemView.findViewById(R.id.staff_date);
-            in = (TextView)itemView.findViewById(R.id.in_time);
-            out = (TextView)itemView.findViewById(R.id.out_time);
-
+            name = (TextView) itemView.findViewById(R.id.staff_name);
+            date = (TextView) itemView.findViewById(R.id.staff_date);
+            in = (EditText) itemView.findViewById(R.id.in_time);
+            out = (EditText) itemView.findViewById(R.id.out_time);
+            in.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    DialogFragment dialogFragment = new DatePicker(in);
+                    dialogFragment.show(((AttendanceActivity)con).getSupportFragmentManager(), "datePicked");
+                }
+            });
+            out.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    DialogFragment dialogFragment = new DatePicker(in);
+                    dialogFragment.show(((AttendanceActivity)con).getSupportFragmentManager(), "datePicked");
+                }
+            });
         }
     }
 }
+
+
