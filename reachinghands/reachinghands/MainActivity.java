@@ -120,7 +120,10 @@ public class MainActivity extends AppCompatActivity
                 }
                 break;
             case R.id.req:
-                startActivity(new Intent(MainActivity.this, RequestActivity.class));
+                i = getData();
+                if(i==2) {
+                    startActivity(new Intent(MainActivity.this, RequestActivity.class));
+                }
                 break;
         }
     }
@@ -129,7 +132,7 @@ public class MainActivity extends AppCompatActivity
 
         loading = ProgressDialog.show(this,"Please wait...","Fetching...",false,false);
 
-        String url = Config.DATA_URL;         //editTextId.getText().toString().trim();
+        String url = Config.ATTENDENCE_DATA_URL;         //editTextId.getText().toString().trim();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -153,6 +156,60 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void showJSON(String response) {
+        try {
+            JSONObject root = new JSONObject(response);
+            JSONArray array = root.getJSONArray("result");
+
+            for(int i = 0; i < array.length(); i++) {
+                Log.e("TAG", i + "");
+                JSONObject each = array.getJSONObject(i);
+                String name = each.getString("name");
+                Log.e("TAG", name);
+                String date = each.getString("address");
+                Log.e("TAG", date);
+                String intime = each.getString("vc");
+                Log.e("TAG", intime);
+                String outtime = "123";  //each.getString("out_time");
+                Log.e("TAG", outtime);
+                Staff staff = new Staff(name, date, intime, outtime);
+                StaffList.getInstance().mStaffList.add(staff);
+                Log.e("TAG", StaffList.getInstance().mStaffList.size() + " at main");
+                AttendanceActivity.notifyAdapter();
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private int getDataReq() {
+
+        loading = ProgressDialog.show(this,"Please wait...","Fetching...",false,false);
+
+        String url = Config.REQUEST_DATA_URL;         //editTextId.getText().toString().trim();
+
+        StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                loading.dismiss();
+                Log.e("TAG", response);
+                showJSONReq(response);
+                //mAttendenceAdapter.notifyDataSetChanged();
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(MainActivity.this,error.getMessage().toString(),Toast.LENGTH_LONG).show();
+                    }
+                });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+        return 2;
+    }
+
+    private void showJSONReq(String response) {
         try {
             JSONObject root = new JSONObject(response);
             JSONArray array = root.getJSONArray("result");
