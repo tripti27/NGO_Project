@@ -12,6 +12,13 @@ public class Request {
     String who;
     String desc;
 
+    public Request(String item, int qty, String who, String desc) {
+        this.item = item;
+        this.qty = qty;
+        this.who = who;
+        this.desc = desc;
+    }
+
     public String getItem() {
         return item;
     }
