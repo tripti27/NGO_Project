@@ -95,12 +95,26 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_attendance) {
+            int i = getData();
+            if(i==1) {
+                Intent intent = new Intent(MainActivity.this, AttendanceActivity.class);
+                startActivity(intent);
+            }
 
         } else if (id == R.id.nav_purchase) {
+            int i = getData();
+            if(i==2) {
+                startActivity(new Intent(MainActivity.this, RequestActivity.class));
+            }
 
         } else if (id == R.id.nav_records) {
 
         } else if (id == R.id.nav_reminder) {
+            startActivity(new Intent(MainActivity.this, ReminderActivity.class));
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
 
         }
 
