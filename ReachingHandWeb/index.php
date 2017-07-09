@@ -75,7 +75,7 @@ font-weight: bold;
   <div class="row" style="margin: 0px 250px 0px 250px">
 <div class="span6">
  <span style="float:left" > 
-<form class="form-horizontal">
+<form class="form-horizontal" action="staff.php">
 
  <h2 class="form-signin-heading">Staff Login</h2>
  <input type="text" class="input-block-level" placeholder="Username">
@@ -91,7 +91,7 @@ font-weight: bold;
  
  <div class="span6">
  <span style="float:right" > 
-<form class="form-horizontal">
+<form class="form-horizontal" action="admin.php">
 
  
  <h2 class="form-signin-heading">Admin Login</h2>

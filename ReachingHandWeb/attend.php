@@ -72,7 +72,7 @@ hr{
 <br>
 <br>
 </div><center>
-<form action="***">
+<form action="sattend.php">
 <label><h2>Staff Attendence</h2></label>
 <select>
 

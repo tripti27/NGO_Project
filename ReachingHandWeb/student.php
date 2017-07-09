@@ -26,7 +26,7 @@
 <h2>Record Entry </h2>
 
 
-    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+    <form class="well form-horizontal" action=" addStud.php" method="post"  id="contact_form">
 <fieldset>
 
 
@@ -47,7 +47,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="Father Name" placeholder="Father Name" class="form-control"  type="text">
+  <input name="Father" placeholder="Father Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -57,7 +57,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="Mother Name" placeholder="Mother Name" class="form-control"  type="text">
+  <input name="Mother" placeholder="Mother Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -72,7 +72,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-  <input name="Date of Joining" placeholder="Enter Date in format dd/mm/yyyy" class="form-control" type="text">
+  <input name="doj" placeholder="Enter Date in format dd/mm/yyyy" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -84,7 +84,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-  <input name="Date of Birth" placeholder="Enter Date in format dd/mm/yyyy" class="form-control" type="text">
+  <input name="dob" placeholder="Enter Date in format dd/mm/yyyy" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -97,7 +97,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-tint"></i></span>
-  <input name="Blood Group" placeholder="Blood Group" class="form-control"  type="text">
+  <input name="Blood" placeholder="Blood Group" class="form-control"  type="text">
     </div>
   </div>
 </div>
