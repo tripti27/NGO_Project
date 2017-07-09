@@ -21,16 +21,19 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/item_name"
+            android:textColor="@color/colorBlack"
             />
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
             android:id="@+id/qty"
             />
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
         android:id="@+id/desc"
         />
     <LinearLayout
