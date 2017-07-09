@@ -5,7 +5,7 @@ package com.cfg.reachinghands;
  */
 
 public class Config {
-    public static final String REQUEST_DATA_URL = "http://192.168.43.61/areq.php";
+    public static final String REQUEST_DATA_URL = "http://10.49.92.64/areq.php";
     public static final String ATTENDENCE_DATA_URL = "http://192.168.43.61/attendence.php";
 
 }
