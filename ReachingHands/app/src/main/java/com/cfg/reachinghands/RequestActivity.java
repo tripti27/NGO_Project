@@ -26,7 +26,8 @@ public class RequestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request);
 
-        getSupportActionBar().setTitle("Mark Attendance");
+        getSupportActionBar().setTitle("Reaching Hands");
+        getSupportActionBar().setSubtitle("Approve request");
 
         Request request = new Request("-", 0, "-", "-");
         RequestList.getInstance().mRequestList = new ArrayList<>();

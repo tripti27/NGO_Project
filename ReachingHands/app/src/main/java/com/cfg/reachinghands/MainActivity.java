@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity
 
     private int getData() {
 
-        loading = ProgressDialog.show(this,"Please wait...","Fetching...",false,false);
+        //loading = ProgressDialog.show(this,"Please wait...","Fetching...",false,false);
 
         String url = Config.ATTENDENCE_DATA_URL;         //editTextId.getText().toString().trim();
 
@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity
                 loading.dismiss();
                 Log.e("TAG", response);
                 showJSONReq(response);
-                //mAttendenceAdapter.notifyDataSetChanged();
+                //mAttendenceAdapter.notifyDataSetChangped();
             }
         },
                 new Response.ErrorListener() {
